@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWJ Kinetic — Artist Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            /* Creates a 65% text column and a 35% media column */
+            grid-template-columns: 65% 35%;
+            gap: 40px;
+        }
+        
+        /* Left Column Styles */
+        .text-column {
+            padding-right: 20px;
+        }
+        header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #111;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Right Column Styles (Sticky on scroll) */
+        .media-column {
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-right: 10px;
+        }
+        /* Style for videos and images to fit the column perfectly */
+        .media-item {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #eaeaea;
+        }
+        
+        /* Responsive layout for mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .media-column {
+                position: static;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- LEFT COLUMN: TEXT CONTENT (65%) -->
+        <main class="text-column">
+            <header>
+                <h1>AWJ Kinetic</h1>
+                <p class="subtitle">Kinetic Sculptures & Art Installations</p>
+            </header>
+
+            <section id="about">
+                <h2>About the Artist</h2>
+                <p>Type your artist biography here. Describe your journey into kinetic art, your background, and what inspires you to create motion-based artwork.</p>
+                <p>You can add multiple paragraphs to make this side long. As visitors scroll down to read this text, the images and videos on the right will scroll along at their own pace.</p>
+            </section>
+
+            <section id="philosophy">
+                <h2>Design Philosophy</h2>
+                <p>Explain how your sculptures work. Discuss the balance between engineering, mechanics, physics, and visual aesthetics.</p>
+                <p>Add details about the materials you use, such as brass, wood, steel, or motors, and how they contribute to the rhythm of the piece.</p>
+            </section>
+
+            <section id="exhibitions">
+                <h2>Current & Past Exhibitions</h2>
+                <p>List your gallery shows, public installations, or upcoming events here to give viewers context on where your work is displayed.</p>
+            </section>
+        </main>
+
+        <!-- RIGHT COLUMN: AUTOMATICALLY SCROLLING MEDIA (35%) -->
+        <aside class="media-column">
+            
+            <!-- VIDEO EXAMPLE: Muted and autoplaying loop -->
+            <video class="media-item" autoplay loop muted playsinline>
+                <source src="trio-on-wall.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- IMAGE EXAMPLE -->
+            <img class="media-item" src="trio-on-wall.jpg" alt="Kinetic sculpture details">
+
+            <!-- SECOND VIDEO EXAMPLE -->
+            <video class="media-item" autoplay loop muted playsinline>
+                <source src="your-video-file-2.mp4" type="video/mp4">
+            </video>
+
+            <!-- SECOND IMAGE EXAMPLE -->
+            <img class="media-item" src="your-image-file-2.jpg" alt="Kinetic sculpture in motion">
+
+        </aside>
+
+    </div>
+
+</body>
+</html>
