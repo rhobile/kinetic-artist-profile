@@ -29,6 +29,10 @@
         /* Left Column Styles */
         .text-column {
             padding-right: 20px;
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
         }
         header {
             margin-bottom: 40px;
@@ -63,8 +67,12 @@
             font-size: 1.1rem;
         }
 
-        /* Right Column Styles (Scrolls with left column) */
+        /* Right Column Styles (Synced scroll with left column) */
         .media-column {
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -98,6 +106,10 @@
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+            }
+            .text-column {
+                position: static;
+                height: auto;
             }
             .media-column {
                 position: static;
@@ -177,6 +189,19 @@ While studying art and product design at Newcastle in 1972, fellow student Ray M
         </aside>
 
     </div>
+
+    <script>
+        const textColumn = document.querySelector('.text-column');
+        const mediaColumn = document.querySelector('.media-column');
+
+        textColumn.addEventListener('scroll', () => {
+            mediaColumn.scrollTop = textColumn.scrollTop;
+        });
+
+        mediaColumn.addEventListener('scroll', () => {
+            textColumn.scrollTop = mediaColumn.scrollTop;
+        });
+    </script>
 
 </body>
 </html>
