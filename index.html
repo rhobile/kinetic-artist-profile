@@ -81,6 +81,22 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             background: #eaeaea;
         }
+        /* Reset default figure spacing and style video+caption wrapper */
+        figure.media-figure {
+            margin: 0;
+        }
+        /* One-line caption for videos, no border */
+        .video-caption {
+            font-size: 0.95rem;
+            color: #444;
+            padding-top: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* explicitly no border */
+            border: none;
+            margin: 0;
+        }
         
         /* Responsive layout for mobile phones */
         @media (max-width: 768px) {
@@ -106,9 +122,9 @@
 
             <section id="about">
                 <h2>moved by the wind</h2>
-                <p> Ray Merry and I experimented with various materials and structures observing their movement in the wi[...]
-                <p>Because the wind cannot be seen, it is often ignored unless it is doing something useful or disruptive. However, it is the subtler, unexpected movement of air which attracts me[...]
-                <p>I use light alloys, fine stainless bearings and accurate balancing to ensure that the elements of each work can move in very light wind. Some work uses small magnets to bring t[...]
+                <p> Ray Merry and I experimented with various materials and structures observing their movement in the wi[...]</p>
+                <p>Because the wind cannot be seen, it is often ignored unless it is doing something useful or disruptive. However, it is the subtler, unexpected movement of air which attracts me[...]</p>
+                <p>I use light alloys, fine stainless bearings and accurate balancing to ensure that the elements of each work can move in very light wind. Some work uses small magnets to bring t[...]</p>
             </section>
 
             <section id="philosophy">
@@ -127,18 +143,24 @@
         <aside class="media-column">
             
             <!-- VIDEO EXAMPLE: Muted and autoplaying loop -->
-            <video class="media-item" autoplay loop muted playsinline>
-                <source src="trio-on-wall.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <figure class="media-figure">
+                <video class="media-item" autoplay loop muted playsinline>
+                    <source src="trio-on-wall.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption class="video-caption">Trio on wall</figcaption>
+            </figure>
 
             <!-- IMAGE EXAMPLE -->
             <img class="media-item" src="trio-on-wall.jpg" alt="Kinetic sculpture details">
 
             <!-- SECOND VIDEO EXAMPLE -->
-            <video class="media-item" autoplay loop muted playsinline>
-                <source src="ns-leaf-spinning-on-silk.mp4" type="video/mp4">
-            </video>
+            <figure class="media-figure">
+                <video class="media-item" autoplay loop muted playsinline>
+                    <source src="ns-leaf-spinning-on-silk.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">Leaf spinning on silk</figcaption>
+            </figure>
 
             <!-- SECOND IMAGE EXAMPLE -->
             <img class="media-item" src="ns-leaf-spinning-on-silk.jpg" alt="Kinetic sculpture in motion">
