@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Jones kinetic sculpture </title>
+    <title>Andrew Jones Kinetic Sculpture</title>
     <style>
         * {
             box-sizing: border-box;
@@ -15,7 +15,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
-            padding-top: 120px;
+            padding-top: 140px; /* Increased to prevent header overlap */
             padding-left: 20px;
             padding-right: 20px;
         }
@@ -28,41 +28,36 @@
             width: calc(100% - 40px);
             background-color: #f9f9f9;
             border-bottom: 2px solid #eaeaea;
-            padding: 20px;
+            padding: 20px 0; /* Padding inside container limits */
             z-index: 100;
         }
         h1 {
             font-size: 2.8rem;
             color: #111;
             font-family: Helvetica, Arial, sans-serif;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            /* Creates a 65% text column and a 35% media column */
-            grid-template-columns: 65% 35%;
-            gap: 40px;
+            grid-template-columns: 60% 40%; /* Adjusted for better media visibility */
+            gap: 50px;
         }
         
         /* Left Column Styles */
         .text-column {
-            padding-right: 20px;
             position: sticky;
-            top: 120px;
-            height: calc(100vh - 160px);
+            top: 140px;
+            height: calc(100vh - 180px);
             overflow-y: auto;
+            padding-right: 20px;
+            /* Hide scrollbar for clean aesthetic */
+            scrollbar-width: none; 
         }
-        .subtitle {
-            font-size: 2.8rem;
-            color: #666;
-            text-align: center;
-            font-style: italic;
-            line-height: 1.2;
+        .text-column::-webkit-scrollbar {
+            display: none;
         }
+        
         section {
             margin-bottom: 60px;
         }
@@ -70,72 +65,74 @@
             font-size: 1.8rem;
             color: #222;
             margin-bottom: 15px;
+            text-transform: capitalize;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 1.1rem;
+            text-align: justify;
         }
 
-        /* Right Column Styles (Synced scroll with left column) */
+        /* Right Column Styles */
         .media-column {
             position: sticky;
-            top: 120px;
-            height: calc(100vh - 160px);
+            top: 140px;
+            height: calc(100vh - 180px);
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 40px; /* Space between media items */
             padding-right: 10px;
+            scrollbar-width: none;
         }
-        /* Style for videos and images to fit the column perfectly */
+        .media-column::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Responsive Media Styling */
         .media-item {
             width: 100%;
-            border-radius: 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             background: #eaeaea;
         }
-        /* Reset default figure spacing and style video+caption wrapper */
         figure.media-figure {
             margin: 0;
+            width: 100%;
         }
-        /* One-line caption for videos, no border */
         .video-caption {
             font-size: 0.95rem;
-            color: #444;
-            padding-top: 8px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* explicitly no border */
+            color: #666;
+            padding-top: 10px;
             border: none;
             margin: 0;
+            font-style: italic;
         }
         
-        /* Responsive layout for mobile phones */
+        /* Responsive layout for mobile devices */
         @media (max-width: 768px) {
             body {
                 padding-top: 100px;
             }
             header {
-                width: calc(100% - 40px);
+                padding: 15px 0;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             .container {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
-            .text-column {
+            .text-column, .media-column {
                 position: static;
                 height: auto;
-                top: auto;
+                overflow-y: visible;
                 padding-right: 0;
             }
             .media-column {
-                position: static;
-                height: auto;
-                top: auto;
-                padding-right: 0;
+                gap: 30px;
             }
         }
     </style>
@@ -143,30 +140,25 @@
 <body>
 
     <header>
-        <h1>Andrew Jones kinetic sculpture</h1>
+        <h1>Andrew Jones Kinetic Sculpture</h1>
     </header>
 
     <div class="container">
         
-        <!-- LEFT COLUMN: TEXT CONTENT (65%) -->
+        <!-- LEFT COLUMN: TEXT CONTENT -->
         <main class="text-column">
             <section id="about">
-                <h2>moved by the wind</h2>
-                <p>I am moved emotionally by the wind: not so much the strong or steady winds like the Mistral or Bora but more gentle and uncertain air movement around gardens or architecture. Wind w[...]
-These unexpected qualities are reflected in the sculptures which, when still, suggest rigidity rather than fluidity, but which are then transformed or altered in some way by their movement under the i[...]
-The structures I make are often very simple (like the Trio on the wall or Cube in Frame) and I do not wish them to suggest fluidity in themselves (while static), but then to reveal something unexpecte[...]
-
-I use light alloys, fine stainless bearings and accurate balancing to ensure that the elements of each work can move in very light wind. Some work uses small magnets to bring the linear elements to or[...]
-<br>
- <br><br><br><br><br><br><br><br><br><br>
- I delight to find examples of unusual movement in nature like a rotating leaf suspended on spider silk and I hope that the presence of the sculpture will add to an appreciation of how trees and plant[...]
-While studying art and product design at Newcastle in 1972, fellow student Ray Merry and I experimented with various materials and structures observing their movement in the wind. This was an art proj[...]
-
-</p>
+                <h2>Moved by the wind</h2>
+                <p>I am moved emotionally by the wind: not so much the strong or steady winds like the Mistral or Bora but more gentle and uncertain air movement around gardens or architecture. Wind forces are chaotic and unpredictable.</p>
+                <p>These unexpected qualities are reflected in the sculptures which, when still, suggest rigidity rather than fluidity, but which are then transformed or altered in some way by their movement under the influence of the air.</p>
+                <p>The structures I make are often very simple (like the Trio on the wall or Cube in Frame) and I do not wish them to suggest fluidity in themselves (while static), but then to reveal something unexpected when moving.</p>
+                <p>I use light alloys, fine stainless bearings and accurate balancing to ensure that the elements of each work can move in very light wind. Some work uses small magnets to bring the linear elements to rest in predictable alignments.</p>
+                <p>I delight to find examples of unusual movement in nature like a rotating leaf suspended on spider silk and I hope that the presence of the sculpture will add to an appreciation of how trees and plants interact with the air.</p>
+                <p>While studying art and product design at Newcastle in 1972, fellow student Ray Merry and I experimented with various materials and structures observing their movement in the wind. This was an art project that evolved into a lifelong pursuit.</p>
             </section>
 
             <section id="philosophy">
-                <h2>Design </h2>
+                <h2>Design & Mechanics</h2>
                 <p>Explain how your sculptures work. Discuss the balance between engineering, mechanics, physics, and visual aesthetics.</p>
                 <p>Add details about the materials you use, such as brass, wood, steel, or motors, and how they contribute to the rhythm of the piece.</p>
             </section>
@@ -177,10 +169,8 @@ While studying art and product design at Newcastle in 1972, fellow student Ray M
             </section>
         </main>
 
-        <!-- RIGHT COLUMN: AUTOMATICALLY SCROLLING MEDIA (35%) -->
+        <!-- RIGHT COLUMN: AUTOMATICALLY SCROLLING MEDIA -->
         <aside class="media-column">
-            
-            <!-- VIDEO EXAMPLE: Muted and autoplaying loop -->
             <figure class="media-figure">
                 <video class="media-item" autoplay loop muted playsinline>
                     <source src="trio-on-wall.mp4" type="video/mp4">
@@ -189,19 +179,19 @@ While studying art and product design at Newcastle in 1972, fellow student Ray M
                 <figcaption class="video-caption">Trio on wall</figcaption>
             </figure>
 
-<!-- VIDEO EXAMPLE 2: Muted and autoplaying loop -->
             <figure class="media-figure">
                 <video class="media-item" autoplay loop muted playsinline>
                     <source src="cube-no-frame.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <figcaption class="video-caption">Cube </figcaption>
+                <figcaption class="video-caption">Cube</figcaption>
             </figure>
             
-            <!-- IMAGE EXAMPLE -->
-            <img class="media-item" src="trio-on-wall.jpg" alt="Kinetic sculpture details">
+            <figure class="media-figure">
+                <img class="media-item" src="trio-on-wall.jpg" alt="Kinetic sculpture details">
+                <figcaption class="video-caption">Trio on wall (Static Details)</figcaption>
+            </figure>
 
-            <!-- SECOND VIDEO EXAMPLE -->
             <figure class="media-figure">
                 <video class="media-item" autoplay loop muted playsinline>
                     <source src="ns-leaf-spinning-on-silk.mp4" type="video/mp4">
@@ -209,9 +199,10 @@ While studying art and product design at Newcastle in 1972, fellow student Ray M
                 <figcaption class="video-caption">Leaf spinning on silk</figcaption>
             </figure>
 
-            <!-- SECOND IMAGE EXAMPLE -->
-            <img class="media-item" src="ns-leaf-spinning-on-silk.jpg" alt="Kinetic sculpture in motion">
-
+            <figure class="media-figure">
+                <img class="media-item" src="ns-leaf-spinning-on-silk.jpg" alt="Kinetic sculpture in motion">
+                <figcaption class="video-caption">Leaf spinning on silk (Alternative Perspective)</figcaption>
+            </figure>
         </aside>
 
     </div>
@@ -220,14 +211,40 @@ While studying art and product design at Newcastle in 1972, fellow student Ray M
         const textColumn = document.querySelector('.text-column');
         const mediaColumn = document.querySelector('.media-column');
 
+        // Flag to prevent infinite scroll event looping
+        let isSyncingTextScroll = false;
+        let isSyncingMediaScroll = false;
+
         textColumn.addEventListener('scroll', () => {
-            mediaColumn.scrollTop = textColumn.scrollTop;
+            if (!isSyncingMediaScroll) {
+                isSyncingTextScroll = true;
+                
+                // Calculate scroll ratio to match speeds if content lengths differ
+                const textScrollableHeight = textColumn.scrollHeight - textColumn.clientHeight;
+                const mediaScrollableHeight = mediaColumn.scrollHeight - mediaColumn.clientHeight;
+                
+                if (textScrollableHeight > 0) {
+                    const scrollRatio = textColumn.scrollTop / textScrollableHeight;
+                    mediaColumn.scrollTop = scrollRatio * mediaScrollableHeight;
+                }
+            }
+            isSyncingMediaScroll = false;
         });
 
         mediaColumn.addEventListener('scroll', () => {
-            textColumn.scrollTop = mediaColumn.scrollTop;
+            if (!isSyncingTextScroll) {
+                isSyncingMediaScroll = true;
+                
+                const textScrollableHeight = textColumn.scrollHeight - textColumn.clientHeight;
+                const mediaScrollableHeight = mediaColumn.scrollHeight - mediaColumn.clientHeight;
+                
+                if (mediaScrollableHeight > 0) {
+                    const scrollRatio = mediaColumn.scrollTop / mediaScrollableHeight;
+                    textColumn.scrollTop = scrollRatio * textScrollableHeight;
+                }
+            }
+            isSyncingTextScroll = false;
         });
     </script>
-
 </body>
 </html>
